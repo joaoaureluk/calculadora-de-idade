@@ -24,6 +24,10 @@ function add() {
   const valor = document.querySelector("#valor");
   const ano = valor.value; 
 
+  const dataAtual = new Date();
+  const anoAtual = dataAtual.getFullYear();
+  const resultado =anoAtual - ano;
+
 
 
 if (isNaN(ano) ) {
@@ -33,6 +37,12 @@ if (isNaN(ano) ) {
   return
 
 } 
+else if(ano > anoAtual){
+
+var text = "tic tac to ficando entendiado, ja pensei nisso"
+document.getElementById("aviso").innerHTML = text;
+return
+}
 else if (ano < 1){
 
   var text = "skskks acho que eu nao ia pensar nisso né? kskks tenta outra"
@@ -62,11 +72,8 @@ else if (ano > 1900){
  
   
 
-  const dataAtual = new Date();
-  const anoAtual = dataAtual.getFullYear();
-
-  //const resultado = 2005 - 2023;
-  const resultado =anoAtual - ano;
+  
+ 
 
 
   document.querySelector("#result").innerHTML = `Você ${name}  tem  ${resultado} Anos ou vai ter`;
