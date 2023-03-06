@@ -26,12 +26,19 @@ function add() {
 
 
 
-if (isNaN(ano) || ano < 1) {
+if (isNaN(ano) ) {
   
-  var text = "Hahahahaha acho que eu nao iria pensar nisso ksskkssk boa tentativa, tenta outra";
+  var text = "Só numero o seu cabaço";
   document.getElementById("aviso").innerHTML = text;
   return
+
 } 
+else if (ano < 1){
+
+  var text = "skskks acho que eu nao ia pensar nisso né? kskks tenta outra"
+document.getElementById("aviso").innerHTML = text;
+return
+}
 else if (ano <=1800){
  text = "se nao nasceu nessa epoca amigão"
  document.getElementById("aviso").innerHTML = text;
